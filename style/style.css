@@ -1,0 +1,413 @@
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    /* background-color: #98c3e8; */
+    
+}
+
+
+h1{
+    font-size: 36px;
+}
+p{
+    color: white;
+    font-size: 16px;
+}
+
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.visible-hidden{
+    visibility: hidden;
+}
+
+
+.progress{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 8px;
+    background-color: #2c2c2c;
+}
+
+.bar{
+    display: block;
+    width: 0;
+    height: inherit;
+    /* background-image: linear-gradient(90deg, #33ffbb, #31acff, #2ad39f, #0170f0); */
+    background-image: linear-gradient(90deg, #313034, #b63f38);
+}
+/* =========================== container =========================== */
+
+.container{
+    width: 96%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px){
+    .container{
+        width: 720px;
+    }
+}
+
+@media (min-width: 1024px){
+    .container{
+        width: 960px;
+    }
+}
+
+@media (min-width: 1440px){
+    .container{
+        width: 1100px;
+    }
+}
+
+/* =========================== home  =========================== */
+
+.home{
+    background-color: #1c1c21;
+    width: 100vw;
+    /* height: calc(100vh - 70px); */
+    height: 100vh;
+    background-image: url(https://mosir.bochnia.pl/wp-content/uploads/2022/09/Juniorzy-mlodsi-MOSiR-Bochnia-w-Zamosciu-1718.09.2022.jpg);
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home-shadow{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.5);
+}
+
+.home-shadow .container{
+    display: flex;
+    align-items: center;
+    height: 100% ;
+}
+
+.cta{
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid crimson;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+    text-decoration: none;
+}
+.cta:hover {
+	color: white;
+	background-color: crimson;
+}
+
+.cta{
+    color:linear-gradient(233deg, #e56420, #c22525, #3d9c31, #37bbde);
+    animation: hue-rotate 3s linear infinite;
+}
+
+.home-image-license{
+    display: block;
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+
+
+/* == animation == */
+
+
+.hero-text h1 {
+	display: block;
+	width: fit-content;
+	font-size: 3rem;
+	position: relative;
+	color: transparent;
+	animation: text_reveal 0.5s ease forwards;
+	animation-delay: 1s;
+}
+
+.hero-text h1:nth-child(1) {
+	
+	animation-delay: 1s;
+}
+.hero-text h1:nth-child(2) {
+	animation-delay: 2s;
+}
+.hero-text h1:nth-child(3) {
+	
+	animation-delay: 3s;
+}
+
+.hero-text h1 .red:nth-child(3) {
+	animation: text_reveal_name 0.5s ease forwards;
+	animation-delay: 3s;
+}
+.hero-text h1:nth-child(4) {
+	animation: text_reveal_name 0.5s ease forwards;
+	animation-delay: 4s;
+}
+/* hero-text h1:nth-child(5) {
+	
+	animation-delay: 5s;
+}
+hero-text h1:nth-child(6) {
+	animation: text_reveal_name 0.5s ease forwards;
+	animation-delay: 6s;
+} */
+.hero-text h1 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background-color: crimson;
+	animation: text_reveal_box 1s ease;
+	animation-delay: 0.5s;
+}
+.hero-text h1:nth-child(1) span {
+	animation-delay: 0.5s;
+}
+.hero-text h1:nth-child(2) span {
+	animation-delay: 1.5s;
+}
+.hero-text h1:nth-child(3) span {
+	animation-delay: 2.5s;
+}
+
+.hero-text h1:nth-child(4) span {
+	animation-delay: 3.5s;
+}
+
+
+
+
+    
+/* =========================== team  =========================== */
+.team{
+    padding: 5% 0;
+    /* background-color: #98c3e8; */
+    /* background-color: #274b7f; */
+    background: linear-gradient(#274b7f 0%, #98c3e8 100%);
+    color: white;
+}
+
+.team h1{
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    transition: 1s color;
+}
+
+.team h1:hover{
+    color: crimson;
+}
+
+
+.team-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.team-box{
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+    width: 30%;
+    height: 300px;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    background-color: #1c1c21;
+    /* #1f8cab */
+    transition: 1s all;
+    cursor: default;
+
+}
+
+
+.team-box img{
+    width: 50%;
+}
+
+.team-box h3{
+    margin-top: 10%;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+.team-box:nth-of-type(3n){
+margin-right: 0;
+}
+
+.team-box p:hover{
+    text-decoration: underline;
+}
+
+
+.ribbon{
+    --f: 10px; /* control the folded part*/
+    --r: 15px; /* control the ribbon shape */
+    --t: 10px; /* the top offset */
+    
+    position: absolute;
+    inset: var(--t) calc(-1*var(--f)) auto auto;
+    padding: 0 10px var(--f) calc(10px + var(--r));
+    clip-path: 
+        polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+        calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
+        var(--r) calc(50% - var(--f)/2));
+    background: #BD1550;
+    box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+    z-index: 10;
+}
+
+.atribute{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+}
+
+
+@media screen and (min-width: 1000px){
+    .team-box:hover{
+        transform: scale(1.2);
+        background-color: rgba(28, 28, 33,.8);
+    }
+}
+
+@media screen and (max-width: 660px){
+
+    .team-box{
+        width: 45%;
+    }
+
+    .team-box,.team-box:nth-of-type(3n){
+        margin-right: 5%;
+    }
+
+    .team-box h3{
+        margin-top: 10%;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 257px){
+
+    .team-box h3{
+        width: 100%;
+        
+    }
+    .team-box{
+        text-align: center;
+    }
+}
+
+
+/* =========================== @keyframes  =========================== */
+
+
+@keyframes hamburger_puls {
+    0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+
+@keyframes hue-rotate {
+    from {
+      -webkit-filter: hue-rotate(0);
+      -moz-filter: hue-rotate(0);
+      -ms-filter: hue-rotate(0);
+      filter: hue-rotate(0);
+    }
+    to {
+      -webkit-filter: hue-rotate(360deg);
+      -moz-filter: hue-rotate(360deg);
+      -ms-filter: hue-rotate(360deg);
+      filter: hue-rotate(360deg);
+    }
+  }
+
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: crimson;
+		font-weight: 500;
+	}
+}
+
+@keyframes fade{
+    5%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+    90%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    99%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    
+}
+
+@keyframes progress{
+    to{
+        width: calc(100% - 10px);
+    }
+}
